@@ -1,13 +1,17 @@
 def fizz_buzz (n):
-    if n % 3 == 0:
-        print('Fizz')
-    if n % 5 == 0:
-        print('Buzz')
-    if n % 3 and 5 == 0:
-        print('FizzBuzz')
+    for i in range(1, n + 1):
+        if i % 3 == 0:
+          print('Fizz')
+        elif i % 5 == 0:
+          print('Buzz')
+        elif i % 3 and 5 == 0:
+          print('FizzBuzz')
+        else:
+          print(i)
 
     
 
 
 n = 15
-print(fizz_buzz(n))
+fizz_buzz(n)
+

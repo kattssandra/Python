@@ -1,14 +1,16 @@
 def month_to_season(number):
-       if number == 1:
-        print('Лето') 
-       if number == 2:
-        print('Осень') 
-       if number == 3:
-        print('Зима') 
-       if number == 4:
-        print('Весна') 
+       if number in [12, 1, 2]:
+        return "Зима" 
+       elif number in [3, 4, 5]:
+        return "Весна"
+       elif number in [6, 7, 8]:
+        return "Лето"
+       elif number in [9, 10, 11]:
+        return "Осень"
        else:
-          print('Введите цифру от 1 до 4') 
+        return "Введите цифры от 1 до 12"
 
-number = 2
-print(month_to_season(number))
+number = int(input("Введите номер месяца (от 1 до 12): "))
+season = month_to_season(number)
+print(season)
+
