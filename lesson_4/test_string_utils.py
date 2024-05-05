@@ -2,20 +2,16 @@ import pytest
 from string_utils import StringUtils
 
 @pytest.mark.positive_test_capitilize
-@pytest.mark.parametrize('num, result', [('skypro, Skypro'), ('hello world, Hello world'), ('к, К')] )
-
+@pytest.mark.parametrize('num, result', [('skypro', 'Skypro'), ('hello world', 'Hello world'), ('к', 'К')])
 def test_capitilize_positive(num, result):
     utils = StringUtils()
-    res = utils.capitilize(num)  #skypro
+    res = utils.capitilize(num)
     assert res == result
     print(res)
 
 @pytest.mark.xfail
 @pytest.mark.negative_test_capitilize
-@pytest.mark.parametrize('line, result', [("", ""),  # должен падать но проходит тест
-# также должен падать но проходит
- (" ", " "), (None, None)])
-
+@pytest.mark.parametrize('line, result', [("", ""), (" ", " "), (None, None)])
 def test_negative_capitilize(line, result):
     utils = StringUtils()
     res = utils.capitilize(line)
