@@ -49,8 +49,7 @@ total = driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]').tex
 print(total)
 
 sleep(5)
-
-assert total == "$58.29" # падает здесь, не знаю как проверить
+assert total == "Total: $58.29"
 
 driver.quit()
 

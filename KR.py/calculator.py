@@ -24,12 +24,12 @@ eigth_button = driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/di
 result_button = driver.find_element(By.CSS_SELECTOR, 'div[class="screen"]').click()
 
 #ожидание выполнения условий:
-waiter = WebDriverWait(driver, 45) 
-waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, 'div[class="screen"]'), "15")) #падает здесь, не понимаю почему
-driver.implicitly_wait(45)
+waiter = WebDriverWait(driver, 60) 
+result = waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, 'div[class="screen"]'), "15")) 
+driver.implicitly_wait(60)
 
 # Покажи результат
-result = driver.find_element(By.CSS_SELECTOR, 'div[class="screen"]').text
+total = result.text
 print(result)
 
 driver.quit()

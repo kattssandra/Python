@@ -29,13 +29,13 @@ sleep(10)
 
 # Проверьте (assert), что поле Zip code подсвечено красным.
 zip_code = driver.find_element(By.CSS_SELECTOR, 'div[id="zip-code"]').value_of_css_property("background-color")
-assert zip_code == "#f8d7da" # не понимаю где брать значения цвета для проверки
+assert zip_code == ("#f8d7da") 
 
 # Проверьте (assert), что остальные поля подсвечены зеленым.
 all_fields = ["#first-name, #last-name, #address, #e-mail, #phone, #city, #country, #job-position, #company"]
 for field in all_fields:
     color = driver.find_element(By.CSS_SELECTOR, field).value_of_css_property("background-color")
-    assert color == "#d1e7dd" # не понимаю где брать значения цвета для проверки
+    assert color == ("#d1e7dd")
 
 driver.quit()
 
