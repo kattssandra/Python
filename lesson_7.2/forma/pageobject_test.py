@@ -1,4 +1,4 @@
-from pages.MainPage import MainPage
+from MainPage import MainPage
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
