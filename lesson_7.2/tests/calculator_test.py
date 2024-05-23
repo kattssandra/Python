@@ -15,3 +15,4 @@ def test_calculator():
     assert calculator.result() == '15'
 
     driver.quit()
+    

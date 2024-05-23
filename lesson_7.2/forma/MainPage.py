@@ -11,18 +11,17 @@ class MainPage:
         self._driver.maximize_window()
         sleep(2)
     
-    def fields(self):
-        # Заполните форму значениями:
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="first-name"]').send_keys("Иван")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="last-name"]').send_keys("Петров")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="address"]').send_keys("Ленина, 55-3")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="e-mail"]').send_keys("test@skypro.com")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="phone"]').send_keys("+7985899998787")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="zip-code"]').send_keys("")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="city"]').send_keys("Москва")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="country"]').send_keys("Россия")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="job-position"]').send_keys("QA")
-        self._driver.find_element(By.CSS_SELECTOR, 'input[name="company"]').send_keys("SkyPro")
+    def fields(self, name, last, address, email, phone, city, country, job, company):
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "first-name"]').send_keys(name)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "last-name"]').send_keys(last)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "address"]').send_keys(address)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "e-mail"]').send_keys(email)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "phone"]').send_keys(phone)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "zip-code"]').clear()
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "city"]').send_keys(city)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "country"]').send_keys(country)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "job-position"]').send_keys(job)
+        self._driver.find_element(By.CSS_SELECTOR, 'input[name = "company"]').send_keys(company)
     
         # Нажмите кнопку Submit
         self._driver.find_element(By.CSS_SELECTOR, "button[class='btn btn-outline-primary mt-3']").click()

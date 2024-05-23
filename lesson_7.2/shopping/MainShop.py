@@ -14,8 +14,8 @@ class MainShop:
         sleep(2)
     
     # Авторизуйтесь как пользователь standard_user
-    def authorize(self):
-        self._driver.find_element(By.ID, 'user-name').send_keys("standard_user")
-        self._driver.find_element(By.ID, 'password').send_keys("secret_sauce")
-        self._driver.find_element(By.ID, "login-button").click()
+    def authorize(self, name, password):
+        self._driver.find_element(By.CSS_SELECTOR, "#user-name").send_keys(name)
+        self._driver.find_element(By.CSS_SELECTOR, "#password").send_keys(password)
+        self._driver.find_element(By.CSS_SELECTOR, "#login-button").click()
         sleep(10)
