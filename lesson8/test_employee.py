@@ -41,7 +41,7 @@ def test_add_new():
     assert body[-1]["middleName"] == "Петровна"
     assert body[-1]["email"] == "flay86@yandex.by"
     assert body[-1]["companyId"] == companyId
-    assert body[-1]["phone"] == "89991234567"
+    assert body[-1]["phone"] == "123456789"
     assert body[-1]["birthdate"] == "07.09.1986"
     assert body[-1]["isActive"] == True
     assert body[-1]["id"] == emp_id
