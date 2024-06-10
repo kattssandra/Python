@@ -1,9 +1,9 @@
 import random
 from faker import Faker
-from EmployeesApi import EmployeeApi
+from EmployeesApi import EmployeesApi
 from EmployeesTable import EmployeesTable
 
-api = EmployeeApi("https://x-clients-be.onrender.com")
+api = EmployeesApi("https://x-clients-be.onrender.com")
 db = EmployeesTable("postgresql://x_clients_db_3fmx_user:mzoTw2Vp4Ox4NQH0XKN3KumdyAYE31uq@dpg-cour99g21fec73bsgvug-a.oregon-postgres.render.com/x_clients_db_3fmx")
 
 fake = Faker("ru_RU")
