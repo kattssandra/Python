@@ -69,4 +69,12 @@ class EmployeeApi:
         print(resp.json)
         return resp.json()    
     
+    def delete_employee(self, id):
+        employee = {
+           'id': id
+           }
+        my_headers = {'x-client-token': self.get_token()}
+        resp = requests.delete(self.url + f'/employee/{id}', headers=my_headers)
+        return resp.json()
+    
     
