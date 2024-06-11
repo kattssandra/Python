@@ -14,7 +14,7 @@ def test_select():
     row1 = rows[0]
 
     assert row1['id'] > 5166
-    assert row1['name'] == "SkyPro"
+    assert row1['name'] == "Skypro"
 
 def test_select_1_row():
     db = create_engine(db_connection_string)
